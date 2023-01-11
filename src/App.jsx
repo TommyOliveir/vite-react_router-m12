@@ -5,6 +5,8 @@ import Home from './Home'
 import Products from './Products'
 import ProductDetail from './ProductDetail'
 import ProductNew from './ProductNew'
+import Order from './Order'
+import NoMatch from './Nomatch'
 //active link see css
 function App() {
 
@@ -20,6 +22,8 @@ function App() {
         <Route path="/products" element={<Products />}/>
         <Route path="/products/:id" element={<ProductDetail/>}/>
         <Route path="/products/new" element={<ProductNew/>}/>
+        <Route path="/Order" element={<Order/>}/>
+        <Route path="*" element={<NoMatch/>}/>
       </Routes>
 
     </div>
