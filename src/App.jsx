@@ -1,19 +1,19 @@
 
 import './App.css'
-import { Link, Routes, Route } from "react-router-dom"
+import { NavLink, Routes, Route } from "react-router-dom"
 import Home from './Home'
 import Products from './Products'
 import ProductDetail from './ProductDetail'
 import ProductNew from './ProductNew'
-
+//active link see css
 function App() {
 
   return (
     <div className="App">
       <h1>React-router</h1>
       <nav>
-        <Link to="/">Home</Link>
-        <Link to="/products">Products</Link>
+        <NavLink to="/">Home</NavLink>
+        <NavLink to="/products">Products</NavLink>
       </nav>
       <Routes>
         <Route path="/" element={<Home />} />
