@@ -12,7 +12,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>React-router</h1>
+      <h1>React-router Version 6</h1>
       <nav>
         <NavLink to="/">Home</NavLink>
         <NavLink to="/products">Products</NavLink>
