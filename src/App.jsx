@@ -7,7 +7,9 @@ import ProductDetail from './ProductDetail'
 import ProductNew from './ProductNew'
 import Order from './Order'
 import NoMatch from './Nomatch'
-//active link see css
+import NestedRoute from './NestedRoute'
+import FeaturedProducts from './FeaturedProducts'
+//design active link - check css 
 function App() {
 
   return (
@@ -16,13 +18,20 @@ function App() {
       <nav>
         <NavLink to="/">Home</NavLink>
         <NavLink to="/products">Products</NavLink>
+        <NavLink to="/nestedroute">Nested route</NavLink>
       </nav>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<Products />}/>
         <Route path="/products/:id" element={<ProductDetail/>}/>
-        <Route path="/products/new" element={<ProductNew/>}/>
         <Route path="/Order" element={<Order/>}/>
+        {/* nested route*/}
+        <Route path='/nestedroute' element={<NestedRoute/>}>
+          {/* index route */}
+          <Route index element={<FeaturedProducts/>}/>
+          <Route path='featured' element={<FeaturedProducts/>}/>
+          <Route path='new' element={<ProductNew/>}/>
+        </Route>
         <Route path="*" element={<NoMatch/>}/>
       </Routes>
 

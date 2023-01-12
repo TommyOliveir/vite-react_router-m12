@@ -5,7 +5,8 @@ function ProductDetail() {
     const {id} = useParams()
   return (
     <div>
-      <h1>Product Detail {id}</h1>
+      <h1>Using useParams</h1>
+      <h2>Product Detail {id} </h2>
     </div>
   )
 }
