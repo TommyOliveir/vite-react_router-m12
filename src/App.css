@@ -15,3 +15,7 @@ nav {
 nav a.active {
 color: green;
 }
+
+.product-text-info{
+  color: goldenrod;
+}
