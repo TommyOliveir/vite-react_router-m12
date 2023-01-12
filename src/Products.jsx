@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from "react-router-dom"
 import { useEffect, useState } from 'react'
-import ProductDetail from './ProductDetail'
+
 
 function Products() {
   const [products, setProducts] = useState([])
@@ -22,7 +22,7 @@ function Products() {
   ))
 
 
-  console.log(products)
+  // console.log(products)
 
 
   return (
