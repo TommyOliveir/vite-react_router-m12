@@ -6,13 +6,13 @@ const AuthContext = createContext(null)
 import React from 'react'
 
 export const AuthProvider = ({children}) => {
-const [user, setUser] = useState('')
+const [user, setUser] = useState(null)
 
 const login = (user) => {
     setUser(user)
 }
 const logout = () => {
-    setUser('')
+    setUser(null)
 }
 
 return (

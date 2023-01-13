@@ -1,4 +1,5 @@
 
+import React from 'react'
 import './App.css'
 import { NavLink, Routes, Route } from "react-router-dom"
 import Home from './Home'
@@ -12,7 +13,7 @@ import FeaturedProducts from './FeaturedProducts'
 import SearchParams from './SearchParams'
 import Profile from './Profile'
 import Login from './Login'
-import { AuthProvider, useAuth } from './auth'
+import { useAuth } from './auth'
 //design active link - check css 
 function App() {
 
@@ -20,22 +21,20 @@ function App() {
 
   return (
     <div className="App">
-      <AuthProvider>
+   
 
-
-
-        <h1>React-router Version 6</h1>
+        <h1>React-router Version 6 </h1>
         <nav>
           <NavLink to="/">Home</NavLink>
           <NavLink to="/products">Products</NavLink>
           <NavLink to="/nestedroute">Nested route</NavLink>
           <NavLink to="/searchparams">Search params</NavLink>
           <NavLink to="/profile">Profile</NavLink>
-          {/* {
-            !auth.user && (
-              <NavLink to="/login">Login</NavLink>
-            )
-          } */}
+        {
+          !auth.user && (
+            <NavLink to='/login'>Login</NavLink>
+          )
+        }
         </nav>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -55,7 +54,7 @@ function App() {
           <Route path="*" element={<NoMatch />} />
         </Routes>
 
-      </AuthProvider>
+   
     </div>
   )
 }
