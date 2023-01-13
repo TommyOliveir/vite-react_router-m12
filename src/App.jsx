@@ -15,10 +15,15 @@ import Profile from './Profile'
 import Login from './Login'
 import { useAuth } from './auth'
 import RequireAuth from './RequireAuth'
+import { useLocation } from 'react-router-dom'
 //design active link - check css 
 function App() {
 
   const auth = useAuth()
+  const location = useLocation()
+
+  const redirectPath = location.state?.path || '/'
+console.log('path app',redirectPath )
 
   return (
     <div className="App">
